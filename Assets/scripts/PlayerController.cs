@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    // Variables
+    
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Weapon weapon;
+
+    // For fire rate
+    
+    public float fireRate = 0.25f;
+    public float canFire = 1f;
+
 
     Vector2 moveDirection;
     Vector2 mousePosition;
@@ -17,9 +26,15 @@ public class PlayerController : MonoBehaviour
         float movementX = Input.GetAxisRaw("Horizontal");
         float movementY = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButtonDown(0))
+        
+        // Gets left click input to shoot
+        
+        if (Input.GetButton("Fire1") && Time.time > canFire)
         {
             weapon.Shoot();
+            
+            canFire = Time.time + fireRate;
+
         }
 
         moveDirection = new Vector2(movementX, movementY).normalized;
@@ -33,8 +48,12 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
 
         Vector2 aimDirection = mousePosition - rb.position;
+        
+        // This horrible looking math is how the character stays looking at the mouse point
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = aimAngle;
+        
+        
     }
 
 }
