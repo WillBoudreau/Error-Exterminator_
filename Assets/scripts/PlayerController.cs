@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
             weapon.Shoot();
         }
 
+        moveDirection = new Vector2(movementX, movementY).normalized;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
     }
 
     private void FixedUpdate()
