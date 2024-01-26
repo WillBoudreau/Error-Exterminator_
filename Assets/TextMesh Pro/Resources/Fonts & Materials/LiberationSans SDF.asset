@@ -82,10 +82,10 @@ MonoBehaviour:
   material: {fileID: 2180264}
   materialHashCode: 198912371
   m_Version: 1.1.0
-  m_SourceFontFileGUID: 847d006abae73d04a897c4d44af756d5
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 847d006abae73d04a897c4d44af756d5, type: 3}
-  m_SourceFontFile: {fileID: 12800000, guid: 847d006abae73d04a897c4d44af756d5, type: 3}
-  m_AtlasPopulationMode: 1
+  m_SourceFontFileGUID: ba458c1184541476091009c1abe64a66
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: ba458c1184541476091009c1abe64a66, type: 3}
+  m_SourceFontFile: {fileID: 0}
+  m_AtlasPopulationMode: 0
   m_FaceInfo:
     m_FaceIndex: 0
     m_FamilyName: Liberation Sans
