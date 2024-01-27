@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
 
     public GameObject Player;
     public GameObject dashPreFab;
+    public Animator anim;
 
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Weapon weapon;
     public int currentHP;
+    public bool isShooting;
 
     // for dash ability
 
@@ -41,25 +43,43 @@ public class PlayerController : MonoBehaviour
         currentHP = 3;
 
         activeMoveSpeed = moveSpeed;
-
+        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isShooting == true)
+        {
+            anim.SetBool("IsShooting", true);
+        }
+        if(isShooting == false)
+        {
+            anim.SetBool("IsShooting", false);
+        }
         float movementX = Input.GetAxisRaw("Horizontal");
         float movementY = Input.GetAxisRaw("Vertical");
 
         
         // Gets left click input to shoot
-        
+        if (Input.GetButton("Fire1"))
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+
         if (Input.GetButton("Fire1") && Time.time > canFire)
         {
             weapon.Shoot();
             
             canFire = Time.time + fireRate;
-
+            
         }
+
 
         // Dash Input
         if (Input.GetKeyDown(KeyCode.Space)) 

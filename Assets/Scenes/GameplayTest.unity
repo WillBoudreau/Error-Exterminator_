@@ -901,6 +901,7 @@ GameObject:
   - component: {fileID: 631528592}
   - component: {fileID: 631528591}
   - component: {fileID: 631528590}
+  - component: {fileID: 631528595}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -922,10 +923,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 631528589}
   dashPreFab: {fileID: 7329651189360508564, guid: b2442136608b3c34aadb1b161ac6657b, type: 3}
+  anim: {fileID: 0}
   moveSpeed: 5
   rb: {fileID: 631528591}
   weapon: {fileID: 626177003}
   currentHP: 0
+  isShooting: 0
   dashSpeed: 20
   dashLength: 0.25
   dashCooldown: 1
@@ -1061,6 +1064,27 @@ Transform:
   - {fileID: 626177004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &631528595
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631528589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58c96f4ab1b7f3e418b4158cd4f696af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &632231886
 GameObject:
   m_ObjectHideFlags: 0
