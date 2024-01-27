@@ -13,6 +13,7 @@ public class Enemy2 : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        EnemySpawn();
         initPOS = transform.position;
     }
     void Update()
@@ -24,6 +25,10 @@ public class Enemy2 : MonoBehaviour
         Vector3 movement = new Vector3(moveDirection.x,moveDirection.y,0f);
         movement.Normalize();
         transform.Translate(movement * Speed * Time.deltaTime);
+    }
+    void EnemySpawn()
+    {
+        
     }
     void Respawn()
     {
