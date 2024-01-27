@@ -8,8 +8,13 @@ public class Enemy2 : MonoBehaviour
     public float respawnDelay = 3f;
     public Vector2 moveDirection = Vector2.down;
     public GameObject StartPOS;
+    public Vector3 initPOS;
     public GameObject Enemy;
     // Update is called once per frame
+    void Start()
+    {
+        initPOS = transform.position;
+    }
     void Update()
     {
         Move();
