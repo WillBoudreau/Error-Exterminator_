@@ -13,7 +13,7 @@ public class Enemy2 : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        EnemySpawn();
+        BossSpawn();
         initPOS = transform.position;
     }
     void Update()
@@ -26,9 +26,9 @@ public class Enemy2 : MonoBehaviour
         movement.Normalize();
         transform.Translate(movement * Speed * Time.deltaTime);
     }
-    void EnemySpawn()
+    void BossSpawn()
     {
-        
+
     }
     void Respawn()
     {

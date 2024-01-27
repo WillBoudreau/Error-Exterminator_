@@ -7,6 +7,7 @@ public class Enemy3 : MonoBehaviour
     float Speed = 3f;
     float respawnDelay = 3f;
     public GameObject player;
+    public GameObject Minion;
     public GameObject Enemy;
     public Vector3 initPOS;
     private float distance;
@@ -25,6 +26,7 @@ public class Enemy3 : MonoBehaviour
     {
         transform.position = initPOS;
         gameObject.SetActive(true);
+        Minion.SetActive(false);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

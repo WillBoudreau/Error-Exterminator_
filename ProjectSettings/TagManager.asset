@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Undefined
   - Slider
+  - Boss
+  - Minion
   layers:
   - Default
   - TransparentFX
