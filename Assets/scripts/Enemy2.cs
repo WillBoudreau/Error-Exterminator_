@@ -37,10 +37,5 @@ public class Enemy2 : MonoBehaviour
             gameObject.SetActive(false);
             Invoke("Respawn",respawnDelay);
         }
-        if(collision.gameObject.CompareTag("Slider"))
-        {
-            gameObject.SetActive(false);
-            Invoke("Respawn",respawnDelay);
-        }
     }
 }
