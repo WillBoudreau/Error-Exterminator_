@@ -19,13 +19,17 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject HUD;
     public GameObject ControlMenu;
-    public int sceneBuildIndex;
+    public int menuSceneBuildIndex;
+    public int gameSceneBuildIndex;
     private static float dashCoolDown;
     public Slider dashSlider;
+    public GameObject DeathMessageObj;
+    private static bool playerIsDead;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerIsDead = false;
         GameIsPaused = false;
         debugCount = 0;
         playerKills = 0;
@@ -52,6 +56,10 @@ public class UIManager : MonoBehaviour
         dashSlider.value = dashCoolDown;
         HpHud.text = healthString;
         DebugCountHud.text = debugCountString;
+        if(playerIsDead == true)
+        {
+            DeathMessage();
+        }
         if(GameIsPaused == true)
         {
             Pause();
@@ -83,7 +91,8 @@ public class UIManager : MonoBehaviour
     }
     public void ToMenu()
     {
-        SceneManager.LoadScene(sceneBuildIndex);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(menuSceneBuildIndex);
     }
     public void CheckControls()
     {
@@ -95,6 +104,20 @@ public class UIManager : MonoBehaviour
         //Debug line to test quit function in editor
         //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
+    }
+    public static void PlayerIsDead()
+    {
+        playerIsDead = true;
+    }
+    public void DeathMessage()
+    {
+        DeathMessageObj.SetActive(true);
+        HUD.SetActive(false);
+    }
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(gameSceneBuildIndex);
     }
 
 }

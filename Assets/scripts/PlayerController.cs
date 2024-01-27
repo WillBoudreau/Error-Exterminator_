@@ -130,7 +130,8 @@ public class PlayerController : MonoBehaviour
             if(currentHP <= 0)
             {
                 currentHP = 0;
-                SceneManager.LoadScene(2);
+                Time.timeScale = 0.0f;
+                UIManager.PlayerIsDead();
             }
         }
     }
