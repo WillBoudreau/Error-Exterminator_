@@ -825,7 +825,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0793b6ba16169b5478707c5d9f816956, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ef77e7f5e9e2c24cb8dd468c6c6c5a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1240,7 +1240,7 @@ PrefabInstance:
     - target: {fileID: 1660618255571032086, guid: 4a53383302ce1314ca5e79f586789722, type: 3}
       propertyPath: m_text
       value: "Your aim follows the mouse courser\n\nHold down left click to auto
-        fire. \n\nWASD to move."
+        fire. \n\nWASD to move.\n\nSpace to dash."
       objectReference: {fileID: 0}
     - target: {fileID: 1660618255571032086, guid: 4a53383302ce1314ca5e79f586789722, type: 3}
       propertyPath: m_HorizontalAlignment
