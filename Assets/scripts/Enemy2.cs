@@ -37,9 +37,10 @@ public class Enemy2 : MonoBehaviour
             gameObject.SetActive(false);
             Invoke("Respawn",respawnDelay);
         }
-        if(collision.gameObject.CompareTag("Bullet"))
+        if(collision.gameObject.CompareTag("Slider"))
         {
-            Destroy(Enemy);
+            gameObject.SetActive(false);
+            Invoke("Respawn",respawnDelay);
         }
     }
 }

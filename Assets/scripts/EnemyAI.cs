@@ -51,7 +51,6 @@ public class EnemyAI : MonoBehaviour
             for( int i=0; i < 100; i++)
             {
                 GameObject Enemy = Instantiate(EnemyFabNull,EnemPOS.position,transform.rotation);
-                Enemy.GetComponent<Rigidbody2D>().AddForce(EnemPOS.up * Null_Speed, ForceMode2D.Impulse); 
                 Destroy(Enemy, 25f);
             }
         } 
