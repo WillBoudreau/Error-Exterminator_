@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Weapon weapon;
+    public int currentHP;
+    public int killCount;
 
     // For fire rate
     
@@ -19,6 +21,10 @@ public class PlayerController : MonoBehaviour
 
     Vector2 moveDirection;
     Vector2 mousePosition;
+    void Start()
+    {
+        currentHP = 3;
+    }
 
     // Update is called once per frame
     void Update()
@@ -39,8 +45,8 @@ public class PlayerController : MonoBehaviour
 
         moveDirection = new Vector2(movementX, movementY).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
+        // UI functions
+        UIManager.UpdateUI(currentHP, killCount);
     }
 
     private void FixedUpdate()
