@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     private bool GameIsPaused;
     public static int debugCount;
     private static int playerHP;
-    private static int playerKills;
+    public static int playerKills;
     public TextMeshProUGUI HpHud;
     public TextMeshProUGUI DebugCountHud;
     private string healthString;
