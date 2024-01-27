@@ -711,7 +711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 631528589}
-  dashPreFab: {fileID: 7329651189360508564, guid: b2442136608b3c34aadb1b161ac6657b, type: 3}
   moveSpeed: 5
   rb: {fileID: 631528591}
   weapon: {fileID: 626177003}
@@ -720,8 +719,6 @@ MonoBehaviour:
   dashSpeed: 20
   dashLength: 0.25
   dashCooldown: 1
-  dashCounter: 0
-  dashCooldownCounter: 0
   fireRate: 0.25
   canFire: 1
 --- !u!50 &631528591
@@ -827,7 +824,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0793b6ba16169b5478707c5d9f816956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
