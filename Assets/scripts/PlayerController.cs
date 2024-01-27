@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public int currentHP;
     public bool isShooting;
 
+    [SerializeField] AudioSource dashSFX;
+ 
     // for dash ability
 
     private float activeMoveSpeed;
@@ -76,6 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             weapon.Shoot();
             
+
             canFire = Time.time + fireRate;
             
         }
@@ -89,6 +92,7 @@ public class PlayerController : MonoBehaviour
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLength;
                 
+                dashSFX.Play();
                 GameObject dashTrail = Instantiate(dashPreFab, transform.position, Quaternion.identity);
                 Destroy(dashTrail, 1f);
                 

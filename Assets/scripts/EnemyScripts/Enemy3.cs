@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Enemy3 : MonoBehaviour
 {
+    
+    [SerializeField] AudioSource explodeSFX;
+    [SerializeField] AudioSource hurtSFX;
+
     float Speed = 3f;
     float respawnDelay = 3f;
     public GameObject player;
@@ -11,6 +15,7 @@ public class Enemy3 : MonoBehaviour
     public GameObject Enemy;
     public Vector3 initPOS;
     private float distance;
+
     void Start()
     {
         initPOS = transform.position;
@@ -32,15 +37,19 @@ public class Enemy3 : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            hurtSFX.Play();
             gameObject.SetActive(false);
             //UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
         }
         if(collision.gameObject.CompareTag("Slider"))
         {
+            explodeSFX.Play();
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
+
+
         }
     }
 }
