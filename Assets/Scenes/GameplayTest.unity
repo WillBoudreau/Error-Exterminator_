@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPreFab: {fileID: 7312832918525020274, guid: 4e5ceabb864c49c4898aac21c7454975, type: 3}
+  ExplodePreFab: {fileID: 7719512635239570273, guid: d81fdbdb1f8037e469f308424faef69d, type: 3}
   firePoint: {fileID: 454103527}
   fireForce: 20
 --- !u!4 &626177004
