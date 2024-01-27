@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class UIManager : MonoBehaviour
     public GameObject HUD;
     public GameObject ControlMenu;
     public int sceneBuildIndex;
+    private static float dashCoolDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +55,11 @@ public class UIManager : MonoBehaviour
             Pause();
         }
     }
-    public static void UpdateUI(int HP, int Kills)
+    public static void UpdateUI(int HP, int Kills, float abilityCoolDown)
     {
         playerHP = HP;
         playerKills = Kills;
+        dashCoolDown = abilityCoolDown;
     }
     private void Pause()
     {
@@ -86,4 +90,5 @@ public class UIManager : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+
 }

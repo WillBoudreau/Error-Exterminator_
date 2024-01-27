@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         
         
         // UI functions
-        UIManager.UpdateUI(currentHP, killCount);
+        UIManager.UpdateUI(currentHP, killCount, dashCooldownCounter);
     }
 
     private void FixedUpdate()
