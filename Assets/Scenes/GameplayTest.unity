@@ -590,6 +590,9 @@ MonoBehaviour:
   weapon: {fileID: 626177003}
   currentHP: 0
   killCount: 0
+  dashSpeed: 20
+  dashLength: 0.5
+  dashCooldown: 1
   fireRate: 0.25
   canFire: 1
 --- !u!50 &631528591

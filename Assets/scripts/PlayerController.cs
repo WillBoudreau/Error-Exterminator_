@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     // Variables
+
+    public GameObject Player;
     
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Weapon weapon;
     public int currentHP;
     public int killCount;
+
+
+    // for dash ability
+
+    private float activeMoveSpeed;
+    public float dashSpeed;
+
+    public float dashLength = 0.5f, dashCooldown = 1f;
+
+    private float dashCounter;
+    private float dashCooldownCounter;
+
 
     // For fire rate
     
@@ -23,7 +37,11 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePosition;
     void Start()
     {
+        // Starting HP
         currentHP = 3;
+
+        activeMoveSpeed = moveSpeed;
+
     }
 
     // Update is called once per frame
@@ -43,15 +61,51 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        // Dash Input
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            if (dashCooldownCounter <= 0 && dashCounter <= 0)
+            {
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashLength;
+                Player.GetComponent<CircleCollider2D>().enabled = false;
+
+            }
+            
+                
+
+        }
+
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+
+            if (dashCounter <= 0) 
+            {
+                activeMoveSpeed = moveSpeed;
+                dashCooldownCounter = dashCooldown;
+                Player.GetComponent<CircleCollider2D>().enabled = true;
+            }
+        }
+
+        if (dashCooldownCounter > 0)
+        {
+            dashCooldownCounter -= Time.deltaTime;
+        }
+
+
+
         moveDirection = new Vector2(movementX, movementY).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        
         // UI functions
         UIManager.UpdateUI(currentHP, killCount);
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * activeMoveSpeed, moveDirection.y * activeMoveSpeed);
 
         Vector2 aimDirection = mousePosition - rb.position;
         
