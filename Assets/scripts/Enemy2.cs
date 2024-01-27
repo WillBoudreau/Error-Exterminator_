@@ -30,7 +30,7 @@ public class Enemy2 : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            Invoke("Respawn",respawnDelay)
+            Invoke("Respawn",respawnDelay);
         }
         if(collision.gameObject.CompareTag("Bullet"))
         {
