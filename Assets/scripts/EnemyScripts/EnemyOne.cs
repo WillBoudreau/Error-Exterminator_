@@ -34,7 +34,7 @@ public class EnemyOne : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            UIManager.AddToKills();
+            //UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
         }
         if(collision.gameObject.CompareTag("Slider"))
