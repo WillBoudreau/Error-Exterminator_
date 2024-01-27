@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     // Variables
 
     public GameObject Player;
-    
+    public GameObject dashPreFab;
+
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Weapon weapon;
@@ -32,9 +33,9 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.25f;
     public float canFire = 1f;
 
-
     Vector2 moveDirection;
     Vector2 mousePosition;
+
     void Start()
     {
         // Starting HP
@@ -68,7 +69,12 @@ public class PlayerController : MonoBehaviour
             {
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLength;
+                
+                GameObject dashTrail = Instantiate(dashPreFab, transform.position, Quaternion.identity);
+                Destroy(dashTrail, 1f);
+                
                 Player.GetComponent<CircleCollider2D>().enabled = false;
+                
 
             }
             

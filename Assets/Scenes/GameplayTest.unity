@@ -585,13 +585,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14af8253b52c5d743a24bb2df1897c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 631528589}
+  dashPreFab: {fileID: 7329651189360508564, guid: b2442136608b3c34aadb1b161ac6657b, type: 3}
   moveSpeed: 5
   rb: {fileID: 631528591}
   weapon: {fileID: 626177003}
   currentHP: 0
   killCount: 0
   dashSpeed: 20
-  dashLength: 0.5
+  dashLength: 0.25
   dashCooldown: 1
   fireRate: 0.25
   canFire: 1
