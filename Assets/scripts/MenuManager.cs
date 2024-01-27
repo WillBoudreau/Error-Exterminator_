@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public int sceneBuildIndex;
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(sceneBuildIndex);
