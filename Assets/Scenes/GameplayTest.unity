@@ -3081,6 +3081,10 @@ PrefabInstance:
       propertyPath: gameSceneBuildIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6594452992135045060, guid: 4a53383302ce1314ca5e79f586789722, type: 3}
+      propertyPath: m_text
+      value: Player.EXE has stopped responding
+      objectReference: {fileID: 0}
     - target: {fileID: 7321790124797346837, guid: 4a53383302ce1314ca5e79f586789722, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
