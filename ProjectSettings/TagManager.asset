@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UI
   - Slider
+  - Enemy
   layers:
   - Default
   - TransparentFX
