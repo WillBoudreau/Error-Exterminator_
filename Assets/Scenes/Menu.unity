@@ -1466,7 +1466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 455.7002, y: 89.7694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367480797
@@ -1489,11 +1489,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your aim follows the mouse courser
-
-
-    Hold down left click to auto
-    fire. '
+  m_text: "Your aim follows the mouse courser\n\nHold down left click to auto fire.
+    \n\nWASD to move."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
   m_sharedMaterial: {fileID: -2967217762347777821, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
@@ -1527,7 +1524,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

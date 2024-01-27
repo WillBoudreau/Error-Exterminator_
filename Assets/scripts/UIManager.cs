@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     public GameObject ControlMenu;
     public int sceneBuildIndex;
     private static float dashCoolDown;
+    public Slider dashSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class UIManager : MonoBehaviour
         // Extra space at the start of sting is for screen formating
         healthString = string.Format(" Health: {0}", playerHP);
         debugCountString = string.Format("Debug Count: {0}", playerKills);
+        dashSlider.value = dashCoolDown;
         HpHud.text = healthString;
         DebugCountHud.text = debugCountString;
         if(GameIsPaused == true)
@@ -57,6 +59,10 @@ public class UIManager : MonoBehaviour
     }
     public static void UpdateUI(int HP, int Kills, float abilityCoolDown)
     {
+        if(abilityCoolDown <= 0)
+        {
+            dashCoolDown = 1;
+        }
         playerHP = HP;
         playerKills = Kills;
         dashCoolDown = abilityCoolDown;

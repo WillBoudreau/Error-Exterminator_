@@ -122,7 +122,7 @@ MonoBehaviour:
   DebugCountHud: {fileID: 2821723811856619530}
   pauseMenu: {fileID: 881525022903152117}
   HUD: {fileID: 8290027491945723225}
-  ControlMenu: {fileID: 0}
+  ControlMenu: {fileID: 6357890736726502937}
   sceneBuildIndex: 0
 --- !u!1 &881525022903152117
 GameObject:
