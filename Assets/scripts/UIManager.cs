@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     public Slider dashSlider;
     public GameObject DeathMessageObj;
     private static bool playerIsDead;
+    public TextMeshProUGUI DebugCountEndText;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +113,7 @@ public class UIManager : MonoBehaviour
     {
         DeathMessageObj.SetActive(true);
         HUD.SetActive(false);
+        DebugCountEndText.text = string.Format("Debug count: {0}",playerKills);
     }
     public void RestartGame()
     {
