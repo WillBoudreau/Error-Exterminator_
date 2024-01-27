@@ -15,8 +15,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Weapon weapon;
     public int currentHP;
-    public int killCount;
-
 
     // for dash ability
 
@@ -107,7 +105,7 @@ public class PlayerController : MonoBehaviour
         
         
         // UI functions
-        UIManager.UpdateUI(currentHP, killCount, dashCooldownCounter);
+        UIManager.UpdateUI(currentHP, dashCooldownCounter);
     }
 
     private void FixedUpdate()

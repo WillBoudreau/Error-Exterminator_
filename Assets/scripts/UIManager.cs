@@ -65,14 +65,13 @@ public class UIManager : MonoBehaviour
             Pause();
         }
     }
-    public static void UpdateUI(int HP, int Kills, float abilityCoolDown)
+    public static void UpdateUI(int HP, float abilityCoolDown)
     {
         if(abilityCoolDown <= 0)
         {
             dashCoolDown = 1;
         }
         playerHP = HP;
-        playerKills = Kills;
         dashCoolDown = abilityCoolDown;
     }
     private void Pause()
@@ -119,5 +118,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneBuildIndex);
     }
-
+    public static void AddToKills()
+    {
+        playerKills++;
+    }
 }

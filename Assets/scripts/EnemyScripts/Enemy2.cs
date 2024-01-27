@@ -35,11 +35,13 @@ public class Enemy2 : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
+            UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
         }
         if(collision.gameObject.CompareTag("Slider"))
         {
             gameObject.SetActive(false);
+            UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
         }
     }
