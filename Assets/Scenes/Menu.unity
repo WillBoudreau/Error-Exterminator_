@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 467.2222, y: 42.0062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70054886
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ERROR_EXTERMINATOR
+  m_text: TROUBLESHOOT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
   m_sharedMaterial: {fileID: -2967217762347777821, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1640,8 +1640,12 @@ MonoBehaviour:
     comes next?
 
 
+<<<<<<< Updated upstream
     Click the "Debug" Button to begin your new career as our next
     big... '
+=======
+    Click the "Debug" Button to begin your new adventure in... '
+>>>>>>> Stashed changes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
   m_sharedMaterial: {fileID: -2967217762347777821, guid: 197d63c0d780ac64baba87c154255d55, type: 2}
