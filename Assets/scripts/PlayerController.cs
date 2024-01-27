@@ -124,11 +124,14 @@ public class PlayerController : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        currentHP--;
-        if(currentHP <= 0)
+        if(collision.gameObject.CompareTag("Enemy"))
         {
-            currentHP = 0;
-            SceneManager.LoadScene(2);
+            currentHP--;
+            if(currentHP <= 0)
+            {
+                currentHP = 0;
+                SceneManager.LoadScene(2);
+            }
         }
     }
 
