@@ -11,14 +11,17 @@ public class Enemy3 : MonoBehaviour
     float Speed = 3f;
     float respawnDelay = 3f;
     public GameObject player;
-    public GameObject Minion;
-    public GameObject Enemy;
+    public GameObject Enemies;
+    public GameObject Boss;
+    public int KillCount = 8;
     public Vector3 initPOS;
     private float distance;
 
     void Start()
     {
+        KillCount = 8;
         initPOS = transform.position;
+        Boss.SetActive(false);
     }
     void Update()
     {
@@ -31,7 +34,6 @@ public class Enemy3 : MonoBehaviour
     {
         transform.position = initPOS;
         gameObject.SetActive(true);
-        Minion.SetActive(false);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -44,10 +46,17 @@ public class Enemy3 : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Slider"))
         {
+            if(UIManager.playerKills == KillCount)
+            {
+                KillCount = KillCount + 8;
+                Enemies.SetActive(false);
+                Boss.SetActive(true);
+            }
             explodeSFX.Play();
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
+            gameObject.SetActive(false);
 
 
         }

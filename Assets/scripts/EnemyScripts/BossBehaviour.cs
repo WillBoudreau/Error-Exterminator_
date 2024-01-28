@@ -9,6 +9,7 @@ public class BossBehaviour : MonoBehaviour
     int BossHp = 3;
     int BossLives = 1;
     int BossSpawn = 8;
+    public int KillCount = 8;
     public GameObject player;
     public GameObject Boss;
     public GameObject Minion1;
@@ -18,9 +19,11 @@ public class BossBehaviour : MonoBehaviour
     
     void Start()
     {
+        KillCount = 8;
         initPOS = transform.position;
         Minion1.SetActive(false);
         Minion2.SetActive(false);
+        Debug.Log(UIManager.playerKills);
     }
     void Update()
     {
@@ -32,45 +35,22 @@ public class BossBehaviour : MonoBehaviour
     void Respawn()
     {
         Debug.Log(BossLives);
+        Boss.SetActive(false);
+        Minion1.SetActive(true);
+        Minion2.SetActive(true);
+        Minion1.transform.position = Boss.transform.position;
+        Minion2.transform.position = Boss.transform.position;
         
-        if(BossLives < 0)
-        {
-            Boss.SetActive(false);
-            Minion1.SetActive(false);
-            Minion2.SetActive(false);
-        }
-        else
-        {
-            Boss.SetActive(false);
-            Minion1.SetActive(true);
-            Minion2.SetActive(true);
-            Minion1.transform.position = Boss.transform.position;
-            Minion2.transform.position = Boss.transform.position;
-        }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // if(collision.gameObject.CompareTag("Player"))
-        // {
-        //     gameObject.SetActive(false);
-        //     //UIManager.AddToKills();
-        //     Invoke("Respawn",respawnDelay);
-        // }
         if(collision.gameObject.CompareTag("Slider"))
         {
-            BossHp--;
-            if(BossHp <= 0)
-            {
-                BossLives = BossLives - 1;
-                gameObject.SetActive(false);
-                UIManager.AddToKills();
-                Invoke("Respawn",respawnDelay);
-                if(!Boss.activeSelf)
-                {
-                    Minion1.SetActive(false);
-                    Minion2.SetActive(false);
-                }
-            }
+            
+            BossLives = BossLives - 1;
+            UIManager.AddToKills();
+            Invoke("Respawn",respawnDelay);
+            
         }
     }
 }
