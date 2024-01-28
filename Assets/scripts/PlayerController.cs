@@ -156,6 +156,10 @@ public class PlayerController : MonoBehaviour
                 UIManager.PlayerIsDead();
             }
         }
+        if(collision.gameObject.CompareTag("Minion"))
+        {
+            Debug.Log("Hello world");
+        }
     }
 
 }

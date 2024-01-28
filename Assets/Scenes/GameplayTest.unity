@@ -499,6 +499,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3535207117882076311, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
   m_PrefabInstance: {fileID: 366697443}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &252852112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252852107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efac196a1d6e1354488eecfaaff50d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies: {fileID: 1308746520}
+  player: {fileID: 631528589}
+  Boss: {fileID: 252852107}
+  Minion1: {fileID: 269262472}
+  Minion2: {fileID: 2017477260}
+  initPOS: {x: 0, y: 0, z: 0}
 --- !u!1 &261234713
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,12 +599,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 269262472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efac196a1d6e1354488eecfaaff50d07, type: 3}
+  m_Script: {fileID: 11500000, guid: 49e224500d95bed49a104acd88cf2d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KillCount: 8
-  player: {fileID: 631528589}
   Boss: {fileID: 252852107}
+  player: {fileID: 631528589}
+  Enemies: {fileID: 1308746520}
   Minion1: {fileID: 269262472}
   Minion2: {fileID: 2017477260}
   initPOS: {x: 0, y: 0, z: 0}
@@ -654,6 +672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTrackBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 6091713946400828290, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091713946400828290, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 6280771316348611034, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -670,10 +696,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8773585
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1067517497280919262, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3535207117882076311, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 252852112}
   m_SourcePrefab: {fileID: 100100000, guid: ce3c4482032170c4598497f6a58337ee, type: 3}
 --- !u!1 &367296979
 GameObject:
@@ -2430,6 +2460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTrack
       objectReference: {fileID: 0}
+    - target: {fileID: 3025098388703438038, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_TagString
+      value: Minion
+      objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.102
@@ -2553,6 +2587,10 @@ PrefabInstance:
     - target: {fileID: 3025098388703438038, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_Name
       value: EnemyTrack (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025098388703438038, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_TagString
+      value: Minion
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3005,12 +3043,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2017477260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efac196a1d6e1354488eecfaaff50d07, type: 3}
+  m_Script: {fileID: 11500000, guid: 49e224500d95bed49a104acd88cf2d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KillCount: 8
-  player: {fileID: 631528589}
   Boss: {fileID: 252852107}
+  player: {fileID: 631528589}
+  Enemies: {fileID: 1308746520}
   Minion1: {fileID: 269262472}
   Minion2: {fileID: 2017477260}
   initPOS: {x: 0, y: 0, z: 0}

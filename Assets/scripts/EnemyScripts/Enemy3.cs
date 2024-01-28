@@ -13,13 +13,13 @@ public class Enemy3 : MonoBehaviour
     public GameObject player;
     public GameObject Enemies;
     public GameObject Boss;
-    public int KillCount = 8;
+    int KillCount = 8;
     public Vector3 initPOS;
     private float distance;
 
     void Start()
     {
-        KillCount = 8;
+        Debug.Log("KillCount" + KillCount);
         initPOS = transform.position;
         Boss.SetActive(false);
     }
@@ -46,9 +46,9 @@ public class Enemy3 : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Slider"))
         {
-            if(UIManager.playerKills == KillCount)
+            if(UIManager.playerKills >= KillCount)
             {
-                KillCount = KillCount + 8;
+                KillCount += 8;
                 Enemies.SetActive(false);
                 Boss.SetActive(true);
             }
@@ -56,9 +56,6 @@ public class Enemy3 : MonoBehaviour
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
-            gameObject.SetActive(false);
-
-
         }
     }
 }
