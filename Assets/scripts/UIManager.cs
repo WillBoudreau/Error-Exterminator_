@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     public GameObject DeathMessageObj;
     private static bool playerIsDead;
     public TextMeshProUGUI DebugCountEndText;
+    public int endlessSceneBuildIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -123,5 +124,10 @@ public class UIManager : MonoBehaviour
     public static void AddToKills()
     {
         playerKills++;
+    }
+    public void RestartEndless()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(endlessSceneBuildIndex);
     }
 }
