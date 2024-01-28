@@ -12,10 +12,13 @@ public class Enemy3 : MonoBehaviour
     float respawnDelay = 3f;
     public GameObject player;
     public GameObject Enemies;
+    public GameObject HealthDrop;
+    public GameObject SpeedDrop;
     public GameObject Boss;
     int KillCount = 8;
     public Vector3 initPOS;
     private float distance;
+    public Vector3 dropPosition;
 
     void Start()
     {
@@ -52,10 +55,29 @@ public class Enemy3 : MonoBehaviour
                 Boss.SetActive(true);
             }
             explodeSFX.Play();
+            dropPosition = transform.position;
+            RollDrop();
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
             KillCount += 8;
+        }
+    }
+    void RollDrop()
+    {
+        int DropRoll = Random.Range(0,100);
+        if(DropRoll < 30)
+        {
+            // is ment to be empty. 
+            Debug.Log("No Drop");
+        }
+        if(DropRoll > 33 && DropRoll < 66)
+        {
+            Debug.Log("Speed Drop");
+        }
+        if(DropRoll > 66)
+        {
+            Debug.Log("Health Drop");
         }
     }
 }

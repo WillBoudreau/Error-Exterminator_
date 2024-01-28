@@ -10,6 +10,8 @@ TagManager:
   - Slider
   - Boss
   - Minion
+  - HealthPickup
+  - SpeedPickup
   layers:
   - Default
   - TransparentFX
