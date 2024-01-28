@@ -8,7 +8,7 @@ public class Enemy3 : MonoBehaviour
     [SerializeField] AudioSource explodeSFX;
     [SerializeField] AudioSource hurtSFX;
 
-    float Speed = 3f;
+    public float Speed = 3f;
     float respawnDelay = 3f;
     public GameObject player;
     public GameObject Enemies;
@@ -37,6 +37,7 @@ public class Enemy3 : MonoBehaviour
     {
         transform.position = initPOS;
         gameObject.SetActive(true);
+        Speed = Speed + 0.1f;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -64,18 +65,21 @@ public class Enemy3 : MonoBehaviour
     void RollDrop()
     {
         int DropRoll = Random.Range(0,100);
-        if(DropRoll < 30)
+        if(DropRoll < 50)
         {
             // is ment to be empty. 
             Debug.Log("No Drop");
         }
-        if(DropRoll > 33 && DropRoll < 66)
+        if(DropRoll > 50 && DropRoll < 75)
         {
-            Debug.Log("Speed Drop");
+            //Debug.Log("Speed Drop");
+            Instantiate(SpeedDrop, dropPosition, Quaternion.identity);
         }
-        if(DropRoll > 66)
+        if(DropRoll > 75)
         {
-            Debug.Log("Health Drop");
+            //Debug.Log("Health Drop");
+            Instantiate(HealthDrop, dropPosition, Quaternion.identity);
         }
     }
 }
+

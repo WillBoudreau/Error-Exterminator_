@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinionBehaviour : MonoBehaviour
 {
-    float Speed = 1.5f;
+    float Speed = 3f;
     float respawnDelay = 0.5f;
     public GameObject Boss;
     public GameObject player;
@@ -17,6 +17,7 @@ public class MinionBehaviour : MonoBehaviour
     void Start()
     {
         initPOS = transform.position;
+        player = GameObject.FindWithTag("Player");
     }
     void Update()
     {

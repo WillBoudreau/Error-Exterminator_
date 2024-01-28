@@ -13,9 +13,12 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     public float moveSpeed = 5f;
+    public float maxMoveSpeed = 10f;
     public Rigidbody2D rb;
     public Weapon weapon;
     public int currentHP;
+    public int maxHP = 5;
+    public int startHP = 3;
     public bool isShooting;
 
     [SerializeField] AudioSource dashSFX;
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // Starting HP
-        currentHP = 3;
+        currentHP = startHP;
 
         activeMoveSpeed = moveSpeed;
         
@@ -160,6 +163,25 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Hello world");
         }
+        if(collision.gameObject.CompareTag("HealthPickup"))
+        {
+            currentHP++;
+            if(currentHP > maxHP)
+            {
+                currentHP = maxHP;
+            }
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.CompareTag("SpeedPickup"))
+        {
+            moveSpeed = moveSpeed + 0.1f;
+            if(moveSpeed > maxMoveSpeed)
+            {
+                moveSpeed = maxMoveSpeed;
+            }
+            Destroy(collision.gameObject);
+        }
+        //Debug.Log(collision);
     }
 
 }

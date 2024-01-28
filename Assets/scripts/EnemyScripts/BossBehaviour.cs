@@ -11,17 +11,20 @@ public class BossBehaviour : MonoBehaviour
     public GameObject Enemies;
     public GameObject player;
     public GameObject Boss;
-    public GameObject Minion1;
-    public GameObject Minion2;
+    public GameObject Minion;
     public Vector3 initPOS;
     private float distance;
     
     void Start()
     {
         initPOS = transform.position;
-        Minion1.SetActive(false);
-        Minion2.SetActive(false);
         Debug.Log(UIManager.playerKills);
+    }
+    void Awake()
+    {
+        initPOS = transform.position;
+        SpawnMinions();
+        Invoke("SpawnMinions",1);
     }
     void Update()
     {
@@ -33,11 +36,6 @@ public class BossBehaviour : MonoBehaviour
     {
         Debug.Log("Boss" + BossLives);
         Boss.SetActive(false);
-        Minion1.SetActive(true);
-        Minion2.SetActive(true);
-        Minion1.transform.position = Boss.transform.position;
-        Minion2.transform.position = Boss.transform.position;
-        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -48,13 +46,17 @@ public class BossBehaviour : MonoBehaviour
             {
                 BossHp = 0;
                 UIManager.AddToKills();
-                Invoke("Respawn",respawnDelay);
+                //Invoke("Respawn",respawnDelay);
                 SceneManager.LoadScene(2);
             }
         }
         if(collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            UIManager.PlayerIsDead();
         } 
+    }
+    void SpawnMinions()
+    {
+        Instantiate(Minion, initPOS, Quaternion.identity);
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5237361893148519004}
   - component: {fileID: 4674582787915263350}
   m_Layer: 0
-  m_Name: EnemyTrack
+  m_Name: NullReferanceEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3025098388703438038}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.102, y: 13.303, z: 0}
   m_LocalScale: {x: 1.5, y: 1.4446216, z: 1.5831469}
   m_ConstrainProportionsScale: 1
@@ -143,6 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e334bcf7da140418c213379e3f46da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explodeSFX: {fileID: 0}
+  hurtSFX: {fileID: 0}
   player: {fileID: 0}
-  Enemy: {fileID: 3025098388703438038}
+  Enemies: {fileID: 0}
+  HealthDrop: {fileID: 5166585685606690402, guid: 8b4a1eef6bc3fb344addf3b1f095e266, type: 3}
+  SpeedDrop: {fileID: 2269575979947873559, guid: 087009d99658fef42a25adf7fe4159a9, type: 3}
+  Boss: {fileID: 0}
   initPOS: {x: 0, y: 0, z: 0}
+  dropPosition: {x: 0, y: 0, z: 0}

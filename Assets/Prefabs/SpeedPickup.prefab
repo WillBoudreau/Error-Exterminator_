@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 719093589581090929}
   - component: {fileID: 2998864389218158220}
   - component: {fileID: 2635237576089127974}
+  - component: {fileID: 7951033560684881516}
   m_Layer: 0
   m_Name: SpeedPickup
   m_TagString: SpeedPickup
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7951033560684881516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269575979947873559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a99ab3e7a5fa63449dd55e4f9c92ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
