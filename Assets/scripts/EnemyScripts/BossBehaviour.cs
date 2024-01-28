@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BossBehaviour : MonoBehaviour
 {
     float Speed = 1.5f;
@@ -46,5 +46,9 @@ public class BossBehaviour : MonoBehaviour
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
         }
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(2);
+        } 
     }
 }

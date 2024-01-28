@@ -48,7 +48,6 @@ public class Enemy3 : MonoBehaviour
         {
             if(UIManager.playerKills >= KillCount)
             {
-                KillCount += 8;
                 Enemies.SetActive(false);
                 Boss.SetActive(true);
             }
@@ -56,6 +55,7 @@ public class Enemy3 : MonoBehaviour
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
+            KillCount += 8;
         }
     }
 }
