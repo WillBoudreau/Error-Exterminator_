@@ -136,12 +136,24 @@ PrefabInstance:
       value: EnemyTrack (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15093775
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.19116057
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.72
+      value: -22.8359
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.96
+      value: 23.0393
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.z
@@ -195,6 +207,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d51939313585eea4e8fd47a4958cfbd8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1551,6 +1567,18 @@ PrefabInstance:
       value: EnemyTrack (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16372377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17942332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.21
       objectReference: {fileID: 0}
@@ -1610,6 +1638,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 310135247c4847e4e9d2dbe4869129cf, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1626,6 +1658,18 @@ PrefabInstance:
     - target: {fileID: 3025098388703438038, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_Name
       value: EnemyTrack (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14446215
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15831469
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1687,6 +1731,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 564d88ce5e511b14e9cc0a023acbdd80, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1833,6 +1881,18 @@ PrefabInstance:
       value: EnemyTrack (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16372377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17942332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.39
       objectReference: {fileID: 0}
@@ -1892,6 +1952,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2093c0e2fb2d31b438a5a6dd88936672, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2132,6 +2196,18 @@ PrefabInstance:
       value: EnemyTrack (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16372377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17942332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.54
       objectReference: {fileID: 0}
@@ -2191,6 +2267,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e92cdc4e27d9d1542b2ebced50c61d89, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2360,6 +2440,18 @@ PrefabInstance:
       value: EnemyTrack (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16372377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17942332
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.34
       objectReference: {fileID: 0}
@@ -2419,6 +2511,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 56211b986002d9d41898b0c794136d8b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2565,12 +2661,24 @@ PrefabInstance:
       value: NullReferanceEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15590657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15665057
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.31662938
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.83
+      value: 15.1429
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.7
+      value: 22.8605
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2632,6 +2740,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a030ab568f9e61343a92f0527ef4afd9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2653,6 +2765,18 @@ PrefabInstance:
     - target: {fileID: 3025098388703438038, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_Name
       value: EnemyTrack (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16372377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17942332
       objectReference: {fileID: 0}
     - target: {fileID: 3091777730768792585, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2714,6 +2838,10 @@ PrefabInstance:
       propertyPath: explodeSFX
       value: 
       objectReference: {fileID: 827746571}
+    - target: {fileID: 7282475416595870830, guid: 4a34eaad5c2e02048beb8acb93466288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ded1e8cbdc069a4d8a004395ad235e1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
