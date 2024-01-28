@@ -50,16 +50,16 @@ public class Enemy3 : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Slider"))
         {
-            if(UIManager.playerKills >= KillCount)
-            {
-                Boss.SetActive(true);
-            }
             explodeSFX.Play();
             dropPosition = transform.position;
             RollDrop();
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
+            if(UIManager.playerKills >= KillCount)
+            {
+                Boss.SetActive(true);
+            }
         }
     }
     void RollDrop()
