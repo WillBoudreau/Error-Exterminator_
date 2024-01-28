@@ -19,7 +19,6 @@ public class BossBehaviour : MonoBehaviour
     void Start()
     {
         initPOS = transform.position;
-        Boss.SetActive(false);
         Minion1.SetActive(false);
         Minion2.SetActive(false);
     }
