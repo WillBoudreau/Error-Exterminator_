@@ -6,7 +6,7 @@ public class BossBehaviour : MonoBehaviour
 {
     float Speed = 1.5f;
     float respawnDelay = 0.5f;
-    int BossHp = 3;
+    int BossHp = 50;
     int BossLives = 1;
     public GameObject Enemies;
     public GameObject player;
@@ -43,8 +43,14 @@ public class BossBehaviour : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Slider"))
         {
-            UIManager.AddToKills();
-            Invoke("Respawn",respawnDelay);
+            BossHp--;
+            if(BossHp <= 0)
+            {
+                BossHp = 0;
+                UIManager.AddToKills();
+                Invoke("Respawn",respawnDelay);
+                SceneManager.LoadScene(2);
+            }
         }
         if(collision.gameObject.CompareTag("Player"))
         {

@@ -13,7 +13,7 @@ public class Enemy3 : MonoBehaviour
     public GameObject player;
     public GameObject Enemies;
     public GameObject Boss;
-    int KillCount = 8;
+    int KillCount = 40;
     public Vector3 initPOS;
     private float distance;
 
@@ -48,14 +48,12 @@ public class Enemy3 : MonoBehaviour
         {
             if(UIManager.playerKills >= KillCount)
             {
-                Enemies.SetActive(false);
                 Boss.SetActive(true);
             }
             explodeSFX.Play();
             gameObject.SetActive(false);
             UIManager.AddToKills();
             Invoke("Respawn",respawnDelay);
-            KillCount += 8;
         }
     }
 }
