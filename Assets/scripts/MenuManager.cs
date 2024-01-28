@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public int sceneBuildIndex;
+    public int debugSceneBuildIndex;
+    public int endlessSceneBuildIndex;
     void Start()
     {
         Time.timeScale = 1f;
@@ -13,7 +14,12 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         
-        SceneManager.LoadScene(sceneBuildIndex);
+        SceneManager.LoadScene(debugSceneBuildIndex);
+    }
+    public void StartEndless()
+    {
+        
+        SceneManager.LoadScene(endlessSceneBuildIndex);
     }
     public void QuitGame()
     {
