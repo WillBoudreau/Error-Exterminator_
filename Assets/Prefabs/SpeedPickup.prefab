@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSFX: {fileID: 8300000, guid: febc7dd3fee453243911331d01050d50, type: 3}
+  PopUpPrefab: {fileID: 6475955328084496093, guid: baa66e987b184404ba2dd14de2bd0b63, type: 3}

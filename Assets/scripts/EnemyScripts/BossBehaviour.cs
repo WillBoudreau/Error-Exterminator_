@@ -14,9 +14,11 @@ public class BossBehaviour : MonoBehaviour
     public GameObject Minion;
     public Vector3 initPOS;
     private float distance;
+    public Animator bossAnim;
     
     void Start()
     {
+        bossAnim.SetBool("IsHurt",false);
         initPOS = transform.position;
         Debug.Log(UIManager.playerKills);
     }
@@ -32,6 +34,10 @@ public class BossBehaviour : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position,Speed * Time.deltaTime);
     }
+    void LateUpdate()
+    {
+        bossAnim.SetBool("IsHurt",false);
+    }
     void Respawn()
     {
         Debug.Log("Boss" + BossLives);
@@ -42,6 +48,7 @@ public class BossBehaviour : MonoBehaviour
         if(collision.gameObject.CompareTag("Slider"))
         {
             BossHp--;
+            bossAnim.SetBool("IsHurt",true);
             if(BossHp <= 0)
             {
                 BossHp = 0;
