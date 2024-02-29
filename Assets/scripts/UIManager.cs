@@ -7,26 +7,28 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
-    private bool GameIsPaused;
-    public static int debugCount;
-    private static int playerHP;
-    public static int playerKills;
+    [Header("Object Referances")]
     public TextMeshProUGUI HpHud;
     public TextMeshProUGUI DebugCountHud;
-    private string healthString;
-    private string debugCountString;
     public GameObject pauseMenu;
     public GameObject HUD;
     public GameObject ControlMenu;
-    public int menuSceneBuildIndex;
-    public int gameSceneBuildIndex;
-    private static float dashCoolDown;
     public Slider dashSlider;
     public GameObject DeathMessageObj;
-    private static bool playerIsDead;
     public TextMeshProUGUI DebugCountEndText;
+    [Header("HUD Variables")]
+    public static int debugCount;
+    private static int playerHP;
+    public static int playerKills;
+    private string healthString;
+    private string debugCountString;
+    private static float dashCoolDown;
+    private static bool playerIsDead;
     public int endlessSceneBuildIndex;
+    public int menuSceneBuildIndex;
+    public int gameSceneBuildIndex;
+    [Header("Pause Bool")]
+    private bool GameIsPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Pause/Unpause input
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(GameIsPaused == true)
@@ -53,22 +56,24 @@ public class UIManager : MonoBehaviour
             }
         }
         // Extra space at the start of sting is for screen formating
-        healthString = string.Format(" Health: {0}", playerHP);
-        debugCountString = string.Format("Debug Count: {0}", playerKills);
-        dashSlider.value = dashCoolDown;
-        HpHud.text = healthString;
-        DebugCountHud.text = debugCountString;
+        healthString = string.Format(" Health: {0}", playerHP); //sets health text on HUD
+        debugCountString = string.Format("Debug Count: {0}", playerKills); // Sets Kill Count on HUD
+        dashSlider.value = dashCoolDown; //Controls the value for cooldown slider
+        HpHud.text = healthString; //Sets health text
+        DebugCountHud.text = debugCountString;//Sets kill count text
+        //Checks if player is dead
         if(playerIsDead == true)
         {
-            DeathMessage();
+            DeathMessage(); //If dead play death message
         }
-        if(GameIsPaused == true)
+        if(GameIsPaused == true) //If paused, show pasue menu
         {
             Pause();
         }
     }
     public static void UpdateUI(int HP, float abilityCoolDown)
     {
+        //Updates the HP and cooldown on HUD
         if(abilityCoolDown <= 0)
         {
             dashCoolDown = 1;
@@ -78,6 +83,7 @@ public class UIManager : MonoBehaviour
     }
     private void Pause()
     {
+        //Pauses Game
         GameIsPaused = true;
         pauseMenu.SetActive(true);
         HUD.SetActive(false);
@@ -85,6 +91,7 @@ public class UIManager : MonoBehaviour
     }
     public void UnPause()
     {
+        //Un Pauses Game
         GameIsPaused = false;
         pauseMenu.SetActive(false);
         HUD.SetActive(true);
@@ -92,11 +99,13 @@ public class UIManager : MonoBehaviour
     }
     public void ToMenu()
     {
+        //Goes back to main menu
         Time.timeScale = 1f;
         SceneManager.LoadScene(menuSceneBuildIndex);
     }
     public void CheckControls()
     {
+        //Opens control menu
         pauseMenu.SetActive(false);
         ControlMenu.SetActive(true);
     }
@@ -108,25 +117,30 @@ public class UIManager : MonoBehaviour
     }
     public static void PlayerIsDead()
     {
+        //Sets player as dead. 
         playerIsDead = true;
     }
     public void DeathMessage()
     {
+        //Spawns the death message
         DeathMessageObj.SetActive(true);
         HUD.SetActive(false);
         DebugCountEndText.text = string.Format("Debug count: {0}",playerKills);
     }
     public void RestartGame()
     {
+        //Used by button to reset game on Debug
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneBuildIndex);
     }
     public static void AddToKills()
     {
+        //adds a kill to the players HUD
         playerKills++;
     }
     public void RestartEndless()
     {
+        //Used by button to reset on endless
         Time.timeScale = 1f;
         SceneManager.LoadScene(endlessSceneBuildIndex);
     }
