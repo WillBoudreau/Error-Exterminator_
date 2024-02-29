@@ -8,27 +8,42 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [Header("Object Referances")]
+    [SerializeField]
     public TextMeshProUGUI HpHud;
+    [SerializeField]
     public TextMeshProUGUI DebugCountHud;
+    [SerializeField]
     public GameObject pauseMenu;
+    [SerializeField]
     public GameObject HUD;
+    [SerializeField]
     public GameObject ControlMenu;
+    [SerializeField]
     public Slider dashSlider;
+    [SerializeField]
     public GameObject DeathMessageObj;
+    [SerializeField]
     public TextMeshProUGUI DebugCountEndText;
     [Header("HUD Variables")]
+    [SerializeField]
     public static int debugCount;
+    [SerializeField]
     private static int playerHP;
+    [SerializeField]
     public static int playerKills;
     private string healthString;
     private string debugCountString;
     private static float dashCoolDown;
     private static bool playerIsDead;
-    public int endlessSceneBuildIndex;
-    public int menuSceneBuildIndex;
-    public int gameSceneBuildIndex;
     [Header("Pause Bool")]
+    [SerializeField]
     private bool GameIsPaused;
+    [SerializeField]
+    public int endlessSceneBuildIndex;
+    [SerializeField]
+    public int menuSceneBuildIndex;
+    [SerializeField]
+    public int gameSceneBuildIndex;
 
     // Start is called before the first frame update
     void Start()
